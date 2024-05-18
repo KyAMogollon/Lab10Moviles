@@ -46,7 +46,7 @@ public class Authentication : MonoBehaviour
 
     public void LoadNewScene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene2");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
     }
 
     private IEnumerator RegisterUser(string email, string password)
