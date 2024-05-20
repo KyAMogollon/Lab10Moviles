@@ -1130,6 +1130,7 @@ MonoBehaviour:
   texture: {fileID: 2800000, guid: 04cd6ecc4c6236244aa3e8397a32c4cf, type: 3}
   path: /pictures/
   spriteRenderer: {fileID: 1536349482}
+  save: {fileID: 11400000, guid: be489227a3c9f474c9b10b1858c249f6, type: 2}
 --- !u!4 &2081064681
 Transform:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class Storage : MonoBehaviour
 
     [SerializeField] private string path;
     [SerializeField] private SpriteRenderer spriteRenderer;
-
+    [SerializeField] SaveDataSO save;
     //[Header("Files")]
     //[SerializeField] private TextAsset file;
 
@@ -18,6 +18,7 @@ public class Storage : MonoBehaviour
     private void Start()
     {
         _storageReference = FirebaseStorage.DefaultInstance;
+        path = $"/pictures/{save.email}/";
     }
 
     public void UpdloadPicture()
@@ -88,7 +89,7 @@ public class Storage : MonoBehaviour
     private IEnumerator UploadPicture(Texture2D picture)
     {
         //https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-8.0
-        var pictureReference = _storageReference.GetReference($"/pictures/{picture.name}.png");
+        var pictureReference = _storageReference.GetReference($"/pictures/{save.email}/{picture.name}.png");
         var bytes = picture.EncodeToPNG();
         var uploadTask = pictureReference.PutBytesAsync(bytes);
 

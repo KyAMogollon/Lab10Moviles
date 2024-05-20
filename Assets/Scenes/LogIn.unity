@@ -3791,6 +3791,7 @@ MonoBehaviour:
   SignInPassword: {fileID: 993303011}
   SignUpEmail: {fileID: 232488008}
   SignUpPassword: {fileID: 1567863706}
+  saveData: {fileID: 11400000, guid: be489227a3c9f474c9b10b1858c249f6, type: 2}
   OnLogInSuccesful:
     m_PersistentCalls:
       m_Calls: []

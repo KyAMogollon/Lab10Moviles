@@ -17,7 +17,8 @@ public class Authentication : MonoBehaviour
     [Header("SignUp")]
     [SerializeField] TextMeshProUGUI SignUpEmail;
     [SerializeField] TextMeshProUGUI SignUpPassword;
-
+    [Header("Data")]
+    [SerializeField] SaveDataSO saveData;
     private FirebaseAuth _authReference;
 
     public UnityEvent OnLogInSuccesful = new UnityEvent();
@@ -82,6 +83,7 @@ public class Authentication : MonoBehaviour
         else
         {
             Debug.Log($"Login succeeded with {loginTask.Result.User.Email}");
+            saveData.SetEmail(email);
             OnLogInSuccesful?.Invoke();
         }
     }
